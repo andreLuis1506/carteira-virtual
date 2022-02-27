@@ -19,6 +19,8 @@
 </template>
 
 <script setup>
+import {priceFormatter} from '@/utils/formatters'
+
 import {computed} from '@nuxtjs/composition-api'
 
 const props = defineProps({
@@ -27,6 +29,6 @@ const props = defineProps({
 
 const total 
 = computed(() =>{
-  return `R$ ${props.safe.total}`
+  return priceFormatter(props.safe.total)
 })
 </script>

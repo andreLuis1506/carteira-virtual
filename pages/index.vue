@@ -31,6 +31,8 @@
 </template>
 
 <script setup>
+import {priceFormatter} from '@/utils/formatters'
+
 import {ref, computed} from '@nuxtjs/composition-api'
 
 import Safe from '@/components/organisms/Safe.vue'
@@ -41,6 +43,6 @@ const safes = ref([
 ])
 
 const total = computed(() => {
-  return 'R$ 55.50'
+  return priceFormatter(100)
 })
 </script>
