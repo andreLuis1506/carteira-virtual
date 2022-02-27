@@ -24,7 +24,17 @@
             <Safe :safe="item" />
           </v-col>
         </v-row>
-        <v-card-actions class="mt-5"></v-card-actions>
+        <v-card-actions class="mt-5">
+          <v-btn text color="blue">
+            Adicionar
+            <v-icon
+              right
+              dark
+            >
+              mdi-plus-thick
+            </v-icon>
+          </v-btn>
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>
