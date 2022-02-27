@@ -3,9 +3,21 @@
     <v-toolbar :color="safe.color">
       <v-toolbar-title>{{safe.name}}</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
+      <v-menu bottom left>
+        <template  v-slot:activator="{ on, attrs }">
+          <v-btn icon v-bind="attrs" v-on="on">
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item>
+            <v-list-item-title>Editar</v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title>Excluir</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-toolbar>
     <v-row align="center">
       <v-col>
