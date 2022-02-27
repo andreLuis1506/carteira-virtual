@@ -11,10 +11,28 @@
         </template>
         <v-list>
           <v-list-item>
-            <v-list-item-title>Editar</v-list-item-title>
+            <v-list-item-title>
+              <v-icon
+                left
+                dark
+                small
+              >
+                mdi-pencil
+              </v-icon>
+              Editar
+            </v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title>Excluir</v-list-item-title>
+            <v-list-item-title>
+              <v-icon
+              left
+              dark
+              small
+            >
+              mdi-delete
+            </v-icon>
+              Excluir
+            </v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
