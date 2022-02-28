@@ -25,7 +25,7 @@
           </v-col>
         </v-row>
         <v-card-actions class="mt-5">
-          <v-btn text color="blue">
+          <v-btn text color="blue" @click="add">
             Adicionar
             <v-icon
               right
@@ -61,4 +61,8 @@ const safes = ref([
 const total = computed(() => {
   return priceFormatter(100)
 })
+
+function add() {
+  store.dispatch('modules/safe/add',{ safe: {name: 'teste aqui', description: 'deu certinho meu parceiro', total: 15}})
+}
 </script>

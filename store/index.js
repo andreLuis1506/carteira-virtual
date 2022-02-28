@@ -7,14 +7,13 @@ export const state = () => ({
 export const mutations ={
   safeDB: async (state, db) => {
     state.db = db
-    console.log(state)
   },
 }
 
 export const actions = {
-  openDB: async ({commit}) =>{
+  openDB: async ({commit}) => {
     const db = await createDB() 
 
-    commit('safeDB', db)
+    commit('safeDB', db) 
   }
 }

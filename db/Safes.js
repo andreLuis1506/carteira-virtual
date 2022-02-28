@@ -16,4 +16,9 @@ export async function createDB() {
       store.createIndex('total', 'total')
     }
   });
+  return db
+}
+
+export async function addSafe(db, safe){
+  db.add('safes', safe)
 }
