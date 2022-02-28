@@ -41,11 +41,17 @@
 </template>
 
 <script setup>
+import {ref, computed, onMounted, useStore} from '@nuxtjs/composition-api'
+
 import {priceFormatter} from '@/utils/formatters'
 
-import {ref, computed} from '@nuxtjs/composition-api'
-
 import Safe from '@/components/organisms/Safe.vue'
+
+const store = useStore()
+
+onMounted(() => {
+  store.dispatch('openDB')
+})
 
 const safes = ref([
   {name: 'Cofre 1', description: 'teste de descriçcão', total: 55.44},

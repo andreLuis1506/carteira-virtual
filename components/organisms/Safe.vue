@@ -57,8 +57,7 @@ const props = defineProps({
   safe: Object
 })
 
-const total 
-= computed(() =>{
+const total = computed(() =>{
   return priceFormatter(props.safe.total)
 })
 </script>
