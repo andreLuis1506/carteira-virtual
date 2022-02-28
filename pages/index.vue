@@ -25,15 +25,19 @@
           </v-col>
         </v-row>
         <v-card-actions class="mt-5">
-          <v-btn text color="blue" @click="add">
-            Adicionar
-            <v-icon
-              right
-              dark
-            >
-              mdi-plus-thick
-            </v-icon>
-          </v-btn>
+          <AddSafeModal  v-model="addModal" >
+            <template #activador>
+              <v-btn text color="blue" @click="add">
+                Adicionar
+                <v-icon
+                  right
+                  dark
+                >
+                  mdi-plus-thick
+                </v-icon>
+              </v-btn>
+            </template>
+          </AddSafeModal>
         </v-card-actions>
       </v-card>
     </v-col>
@@ -46,6 +50,7 @@ import {ref, computed, onMounted, useStore} from '@nuxtjs/composition-api'
 import {priceFormatter} from '@/utils/formatters'
 
 import Safe from '@/components/organisms/Safe.vue'
+import AddSafeModal from '@/components/organisms/AddSafeModal.vue'
 
 const store = useStore()
 
@@ -63,6 +68,7 @@ const total = computed(() => {
 })
 
 function add() {
-  store.dispatch('modules/safe/add',{ safe: {name: 'teste aqui', description: 'deu certinho meu parceiro', total: 15}})
+  addModal.value = true
 }
+const addModal = ref(false)
 </script>
