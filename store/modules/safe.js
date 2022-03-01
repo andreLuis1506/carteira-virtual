@@ -8,7 +8,6 @@ export const state = () =>{
 
 export const mutations = {
   setSafes: async (state,safes) =>{
-    console.log('acontece a mutation?', safes)
     state.safes = safes
   }
 }

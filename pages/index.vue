@@ -49,7 +49,6 @@
 
 <script setup>
 import {ref, computed, onBeforeMount, useStore} from '@nuxtjs/composition-api'
-import {mapState} from 'vuex'
 
 import {priceFormatter} from '@/utils/formatters'
 
