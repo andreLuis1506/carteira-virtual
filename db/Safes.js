@@ -26,3 +26,8 @@ export async function addSafe(db, safe){
 export async function getAllSafes(db){
   return await db.getAll('safes')
 }
+
+
+export async function editSafe(db, safe, key){
+  return await db.put('safes', safe)
+}

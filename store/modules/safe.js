@@ -1,4 +1,4 @@
-import { addSafe, getAllSafes } from "@/db/Safes";
+import { addSafe, editSafe, getAllSafes } from "@/db/Safes";
 
 export const state = () =>{
   return {
@@ -23,8 +23,11 @@ export const actions = {
   list: async ({commit, rootState, state}) => {
     const safes = await getAllSafes(rootState.db)
     commit('setSafes', safes)
-    console.log('isso aqui ta sendo chamado?', state)
-  }
+  },
+  editSafe: ({rootState, dispatch}, {safe, id}) => {
+    editSafe(rootState.db, safe, id)
+    dispatch('list')
+  },
 }
 
 export const getters = {
