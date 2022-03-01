@@ -27,7 +27,7 @@
                 </template>
                 <v-card>
                   <v-card-title>
-                    Editando<strong>{{ safe.name }}</strong>
+                    Editando <strong class="ml-1">{{ safe.name }}</strong>
                   </v-card-title>
                     <v-form @submit.prevent="edit">
                       <v-card-text>
@@ -62,7 +62,7 @@
             <v-list-item-title>
               <DecisionsDialog action="Excluir" icon="mdi-delete" @accepted="del(safe.id)">
                 <template #title>
-                  Excluir <strong> {{safe.name}} </strong>
+                  Excluir <strong class="ml-1"> {{safe.name}} </strong>
                 </template>
                 <template #description>
                   Essa ação é permanente, tem certeza que deseja continuar?
