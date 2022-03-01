@@ -1,18 +1,15 @@
 <template>
-  <v-row justify="center" align="center">
+  <v-row justify="center" align="center" style="height: 700px;">
     <v-col cols="12" sm="8" md="11">
       <v-card>
-        <v-card-title class="title">
-          Carteira virtual
-        </v-card-title>
         <v-row align="center" class="mx-1">
           <v-col>
-            <v-card-text>
-              Aqui possisvelmente vai ter a informação do total guardado
-            </v-card-text>
+            <v-card-title class="title">
+              Carteira <br/> virtual
+            </v-card-title>
           </v-col>
           <v-col class="text-right">
-            <v-card-text>Total:  <strong> {{total}} </strong></v-card-text>
+            <v-card-text>Guardado:  <strong> {{total}} </strong></v-card-text>
           </v-col>
         </v-row>
         <v-divider class="mx-1 mt-4"></v-divider>
@@ -67,7 +64,7 @@ const safes = computed( () => {
 })
 
 const total = computed(() => {
-  return priceFormatter(100)
+  return priceFormatter(store.getters['modules/safe/totalInWallet'])
 })
 
 function add() {

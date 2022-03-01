@@ -34,7 +34,12 @@ export const actions = {
 }
 
 export const getters = {
-  getSafes: (state) =>{
-    return state.safes
+  totalInWallet: (state) =>{
+    let total = 0
+    state.safes.forEach(element => {
+      total = total + parseFloat(element.total)
+      console.log('total',total)
+    });
+    return total
   }
 }
