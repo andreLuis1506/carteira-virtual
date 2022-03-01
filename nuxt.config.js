@@ -3,7 +3,10 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
-
+  target: 'static',
+  router: {
+    base: '/carteira-virtual/tree/gh-pages/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - carteira-virtual',
@@ -40,8 +43,15 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    meta:{
+      title: 'Carteiravirtual',
+      author: 'André Luis'
+    },
     manifest: {
-      lang: 'en',
+      name: 'Carteiravirtual',
+      short_name: 'cv',
+      description: 'primeiro pwa da minha autoria',
+      lang: 'pt-br',
     },
   },
 

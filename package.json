@@ -2,11 +2,14 @@
   "name": "carteira-virtual",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://andreluis1506.github.io/carteira-virtual/",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "yarn build && ./node_modules/.bin/gh-pages -d dist",
+    "deploy2": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.32.0",
@@ -23,6 +26,8 @@
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.12.3",
-    "postcss-html": "^1.3.0"
+    "gh-pages": "^3.2.3",
+    "postcss-html": "^1.3.0",
+    "push-dir": "^0.4.1"
   }
 }
