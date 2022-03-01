@@ -22,3 +22,7 @@ export async function createDB() {
 export async function addSafe(db, safe){
   db.add('safes', safe)
 }
+
+export async function getAllSafes(db){
+  return await db.getAll('safes')
+}
