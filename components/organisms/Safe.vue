@@ -41,12 +41,7 @@
                           label="Descrição"
                           :rules="rules"
                         />
-                        <v-text-field
-                          v-model="totalSafe"
-                          label="Dinheiro guardado"
-                          type="number"
-                          :rules="rules"
-                        />
+                        <MoneyInput label="Dinheiro guardado" v-model="totalSafe"/>
                       </v-card-text>
                       <v-card-actions>
                         <v-btn
@@ -95,6 +90,7 @@ import {priceFormatter} from '@/utils/formatters'
 import {computed, ref, useStore} from '@nuxtjs/composition-api'
 
 import DecisionsDialog from '@/components/molecules/DecisionsDialog.vue'
+import MoneyInput from '@/components/molecules/MoneyInput.vue'
 
 const store = useStore()
 const props = defineProps({
@@ -112,6 +108,7 @@ const name = ref(props.safe.name)
 const description = ref(props.safe.description)
 const totalSafe = ref(props.safe.total)
 function edit (){
+  isEditing.value = false
   store.dispatch('modules/safe/editSafe', {
     safe: {id: props.safe.id, name: name.value, description: description.value, total:totalSafe.value},
     id: props.safe.id,

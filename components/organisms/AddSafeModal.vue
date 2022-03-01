@@ -12,9 +12,9 @@
         </v-card-title>
         <v-form @submit.prevent="add" v-model="valid">
           <v-card-text>
-              <v-text-field v-model="name" label="Nome" required :rules="rules" />
-              <v-textarea v-model="description" label="Descrição" required :rules="rules" />
-              <v-text-field v-model="total" label="Dinheiro guardado" type="number" required :rules="rules"/>
+            <v-text-field v-model="name" label="Nome" required :rules="rules" />
+            <v-textarea v-model="description" label="Descrição" required :rules="rules" />
+            <MoneyInput label="Dinheiro guardado" v-model="total" />
           </v-card-text>
           <v-card-actions>
             <v-btn color="success" type="submit" :disabled="!valid" text right>
@@ -28,6 +28,8 @@
 
 <script setup>
 import {defineProps, defineEmits, watch, ref, useStore} from '@nuxtjs/composition-api'
+
+import MoneyInput from '@/components/molecules/MoneyInput.vue' 
 
 const props = defineProps({
   value: Boolean
@@ -58,6 +60,4 @@ function add(){
   }})
   content.value = false
 }
-
-
 </script>
