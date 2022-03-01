@@ -1,4 +1,4 @@
-import { addSafe, editSafe, getAllSafes } from "@/db/Safes";
+import { addSafe, editSafe, getAllSafes, deleteSafe } from "@/db/Safes";
 
 export const state = () =>{
   return {
@@ -28,6 +28,10 @@ export const actions = {
     editSafe(rootState.db, safe, id)
     dispatch('list')
   },
+  deleteSafe: ({rootState, dispatch}, {id}) => {
+    deleteSafe(rootState.db, id)
+    dispatch('list')
+  }
 }
 
 export const getters = {

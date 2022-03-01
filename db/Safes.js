@@ -27,7 +27,10 @@ export async function getAllSafes(db){
   return await db.getAll('safes')
 }
 
-
-export async function editSafe(db, safe, key){
+export async function editSafe(db, safe){
   return await db.put('safes', safe)
+}
+
+export async function deleteSafe(db, id){
+  return await db.delete('safes', id)
 }

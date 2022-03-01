@@ -49,7 +49,12 @@
                         />
                       </v-card-text>
                       <v-card-actions>
-                        <v-btn color="success" type="submit" :disabled="!valid" text right>
+                        <v-btn
+                          color="success"
+                          text
+                          type="submit" 
+                          :disabled="!valid"
+                        >
                           Salvar
                         </v-btn>
                       </v-card-actions>
@@ -60,7 +65,7 @@
           </v-list-item>
           <v-list-item>
             <v-list-item-title>
-              <DecisionsDialog action="Excluir" icon="mdi-delete">
+              <DecisionsDialog action="Excluir" icon="mdi-delete" @accepted="del(safe.id)">
                 <template #title>
                   Excluir <strong> {{safe.name}} </strong>
                 </template>
@@ -111,6 +116,10 @@ function edit (){
     safe: {id: props.safe.id, name: name.value, description: description.value, total:totalSafe.value},
     id: props.safe.id,
   })
+}
+function del(id){
+  console.log('me chamou')
+  store.dispatch('modules/safe/deleteSafe', {id})
 }
 
 </script>
