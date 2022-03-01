@@ -19,8 +19,11 @@
         <v-card-title class="subtitle-2">
           Cofres: 
         </v-card-title>
-        <v-row align="center" class="px-2">
-          <v-col v-for="(item, i) in safes" :key="i" >
+        <v-row justify="start" align="center" class="px-2">
+          <v-col v-if="safes.length === 0">
+            <p class="my-4 grey--text text-h4 text-center">Nehum cofre registrado ainda</p>
+          </v-col>
+          <v-col v-else v-for="(item, i) in safes" :key="i" md="4" >
             <Safe :safe="item" />
           </v-col>
         </v-row>
@@ -45,7 +48,8 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted, useStore} from '@nuxtjs/composition-api'
+import {ref, computed, onBeforeMount, useStore} from '@nuxtjs/composition-api'
+import {mapState} from 'vuex'
 
 import {priceFormatter} from '@/utils/formatters'
 
@@ -54,14 +58,14 @@ import AddSafeModal from '@/components/organisms/AddSafeModal.vue'
 
 const store = useStore()
 
-onMounted(() => {
-  store.dispatch('openDB')
+onBeforeMount(async() => {
+  await store.dispatch('openDB')
+  await store.dispatch('modules/safe/list')
 })
 
-const safes = ref([
-  {name: 'Cofre 1', description: 'teste de descriçcão', total: 55.44},
-  {name: 'Cofre 2', description: 'teste de descriçcão', total: 55.44}
-])
+const safes = computed( () => {
+  return store.state.modules.safe.safes
+})
 
 const total = computed(() => {
   return priceFormatter(100)
