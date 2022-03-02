@@ -1,4 +1,22 @@
-# carteira-virtual
+# Carteira virtual 
+
+## O que é? 
+Esse projeto foi feito para ajudar a organizar minha conta bancaria. Eu guardo meu dinheiro em uma unica conta, mas as vezes fica dificil lembrar quanto dinheiro lá é destinado ao que, então o que eu fiz foi criar esse app que organiza por pastas (ou "cofres").
+A real é que esse projeto foi feito com o objetivo de estudo. Tem uma demanda de [Vuetify](https://vuetifyjs.com/en/) no trabalho, então resolvir tentar criar algumas coisas para conhecer alguns componentes, além de treinar um pouco da composition api do vue e aprender um pouco sobre [IndexedDB](https://developer.mozilla.org/pt-BR/docs/Web/API/IndexedDB_API).
+Pretendo adicionar mais detalhes na aplicação, melhorias de codigo e novas funcionalidades, mas por enquanto você pode ver como o app anda por aqui: [Carteira-virtual](https://andreluis1506.github.io/carteira-virtual/)
+
+## O que eu usei? 
+
+* [NuxtJS](https://nuxtjs.org/)
+* [Vuex](https://vuex.vuejs.org/)
+* [Vuetify](https://vuetifyjs.com/en/)
+* [IDB](https://github.com/jakearchibald/idb)
+* [GH-pages](https://docs.github.com/pt/pages/getting-started-with-github-pages/about-github-pages)
+
+## Prints
+
+![image](https://user-images.githubusercontent.com/57544105/156278793-d44f2bee-7da2-44d3-88d0-2ed9c6498974.png)
+![image](https://user-images.githubusercontent.com/57544105/156279018-1e1cb205-5a59-4839-9bb9-f6cd601e06c5.png)
 
 ## Build Setup
 
@@ -17,52 +35,3 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
