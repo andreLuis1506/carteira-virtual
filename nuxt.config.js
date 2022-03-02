@@ -4,9 +4,9 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
   target: 'static',
-  // router: {
-  //   base: '/carteira-virtual/tree/gh-pages/'
-  // },
+  router: {
+    base: '/carteira-virtual/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - carteira-virtual',
