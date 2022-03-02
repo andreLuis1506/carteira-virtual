@@ -1,9 +1,9 @@
 # Carteira virtual 
 
 ## O que é? 
-Esse projeto foi feito para ajudar a organizar minha conta bancaria. Eu guardo meu dinheiro em uma unica conta, mas as vezes fica dificil lembrar quanto dinheiro lá é destinado ao que, então o que eu fiz foi criar esse app que organiza por pastas (ou "cofres").
-A real é que esse projeto foi feito com o objetivo de estudo. Tem uma demanda de [Vuetify](https://vuetifyjs.com/en/) no trabalho, então resolvir tentar criar algumas coisas para conhecer alguns componentes, além de treinar um pouco da composition api do vue e aprender um pouco sobre [IndexedDB](https://developer.mozilla.org/pt-BR/docs/Web/API/IndexedDB_API).
-Pretendo adicionar mais detalhes na aplicação, melhorias de codigo e novas funcionalidades, mas por enquanto você pode ver como o app anda por aqui: [Carteira-virtual](https://andreluis1506.github.io/carteira-virtual/)
+Esse projeto foi feito para ajudar a organizar minha conta bancária. Eu guardo meu dinheiro em uma única conta, mas as vezes fica difícil lembrar quanto dinheiro lá é destinado ao que, então o que eu fiz foi criar esse app que organiza por pastas (ou "cofres").
+A real é que esse projeto foi feito com o objetivo de estudo. Tem uma demanda de [Vuetify](https://vuetifyjs.com/en/) no trabalho, então resolvi tentar criar algumas coisas para conhecer alguns componentes, além de treinar um pouco da composition api do vue e aprender um pouco sobre [IndexedDB](https://developer.mozilla.org/pt-BR/docs/Web/API/IndexedDB_API).
+Pretendo adicionar mais detalhes na aplicação, melhorias de código e novas funcionalidades, mas por enquanto você pode ver como o app anda por aqui: [Carteira-virtual](https://andreluis1506.github.io/carteira-virtual/)
 
 ## O que eu usei? 
 
