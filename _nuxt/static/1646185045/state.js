@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fcarteira-virtual\u002F_nuxt\u002Fstatic\u002F1646185045",layout:"default",error:a,state:{db:{},modules:{safe:{safes:[]}}},serverRendered:true,routePath:"\u002F",config:{_app:{basePath:"\u002Fcarteira-virtual\u002F",assetsPath:"\u002Fcarteira-virtual\u002F_nuxt\u002F",cdnURL:a}},globalRefs:{}}}(null));
